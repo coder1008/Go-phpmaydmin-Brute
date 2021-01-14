@@ -1,4 +1,4 @@
-基于Go lang开发,一款完善的phpmaydmin暴力破解安全评估工具，仅做白帽安全测试使用 | 使用之前务必遵纪守法!务做非法用途！ </br>
+基于Go lang开发的一款phpmaydmin暴力破解安全评估工具，仅做白帽安全测试使用 | 使用之前务必遵纪守法!务做非法用途！ </br>
 注意：完全开源，可自行下载源码增强功能，或者直接下载编译好的文件直接使用</br>
 <font color="red">下载地址：</font></br>
 Windows x86系统: <a href="https://github.com/coder1008/Go-phpmaydmin-Brute/raw/master/releases/Windows_amd64-Releases.zip" rel="nofollow" class="d-flex flex-items-center min-width-0">
