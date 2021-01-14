@@ -1,48 +1,16 @@
-## 1. 命令行输入以下命令来安装第三方包:
-- go get github.com/dimiro1/banner
-- go get github.com/mattn/go-colorable
---------------------------------------------  
-
-
-## 1. GoLang 在Windows下编译生成带图标的exe 
-### (1) Windows系统上安装MinGW
-- (2)MinGW下载地址：https://sourceforge.net/projects/mingw-w64/files/mingw-w64/
-- (3)下载64位x86_64-posix-seh压缩包,直接解压就行(例如我这里解压到 D:\mingw64 )
-- (4)如何让go编译器调用gcc呢？需要设置环境变量path，添加 D:\mingw64\bin 到path环境变量值下,最后在命令行下输入 gcc -v 检查是否安装成功
-
-### (2) 添加一个ICO图标
-* (1)准备1张logo.ico图片放到项目目录下
-* (2)在项目目录下创建一个空白文本文件,文件命名为 main.rc 并写入内容: IDI_ICON1 ICON "logo.ico"
-* (3)在项目目录下执行CMD命令 windres -o main.syso main.rc 
-* (4)在项目目录下直接go build, 生成的exe就有了一个好看的图标了.
-
-### (3) 编译出带图标的exe 
-* 在项目目录下执行 go build -o phpmyadmin暴力破解.exe
---------------------------------------------  
-
-
-## 3. GoLang 在Windows下编译Mac, Linux平台的64位可执行程序
-### (1) 在Windows下编译Mac平台的64位可执行程序
-
-- 在项目目录下执行以下命令编译生成
-- SET CGO_ENABLED=0
-- SET GOOS=darwin
-- SET GOARCH=amd64
-- go build -o bf_phpmyadmin
-  
-### (2) 在Windows下编译Linux平台的64位可执行程序
-- 在项目目录下执行以下命令编译生成
-- SET CGO_ENABLED=0
-- SET GOOS=linux 
-- SET GOARCH=amd64 
-- go build -o bf_phpmyadmin
-
-#### GOOS：目标可执行程序运行操作系统，支持 darwin，freebsd，linux，windows
-#### GOARCH：目标可执行程序操作系统构架，包括 386，amd64，arm
-
-### (3) GoLang 在Windows下编译Mac, Linux平台的64位可执行程序报错处理:
-打包出现如下错误 cannot find package "golang.org/x/sys/unix" in 
-- 解决办法如下:
-- git clone https://github.com/golang/sys.git
-- 下载到gopath目录下的golang.org\x\sys 下即可
---------------------------------------------  
+基于Go lang开发,一款完善的phpmaydmin暴力破解安全评估工具，仅做白帽安全测试使用 | 使用之前务必遵纪守法!务做非法用途！ </br>
+注意：完全开源，可自行下载源码增强功能，或者直接下载编译好的文件直接使用</br>
+<font color="red">下载地址：</font></br>
+Windows X86系统: <a href="/coder1008/Go-phpmaydmin-Brute/raw/master/releases/Windows_amd64-Releases.zip " rel="nofollow" class="d-flex flex-items-center min-width-0">
+              <svg class="octicon octicon-package flex-shrink-0 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path></svg>
+              <span class="pl-2 flex-auto min-width-0 text-bold">Windows_amd64-Releases.zip </span>
+</a></br>
+Linux X86系统: <a href="/coder1008/Go-phpmaydmin-Brute/raw/master/releases/Linux_arm64-Releases.zip" rel="nofollow" class="d-flex flex-items-center min-width-0">
+              <svg class="octicon octicon-package flex-shrink-0 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path></svg>
+              <span class="pl-2 flex-auto min-width-0 text-bold">Linux_arm64-Releases.zip</span>
+</a></br>
+Mac X86系统: <a href="/coder1008/Go-phpmaydmin-Brute/raw/master/releases/Mac_amd64-Releases.zip" rel="nofollow" class="d-flex flex-items-center min-width-0">
+              <svg class="octicon octicon-package flex-shrink-0 text-gray" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path></svg>
+              <span class="pl-2 flex-auto min-width-0 text-bold">Mac_amd64-Releases.zip</span>
+</a></br>
+<img src="https://raw.githubusercontent.com/coder1008/Go-phpmaydmin-Brute/master/releases/1.png" style="max-width:100%;"></br></br>
